@@ -8,6 +8,10 @@ goctl plugin to parse api definitions and generate api files with handler commen
 go install github.com/wqyjh/goctl-gogen@v0.1.1
 ```
 
+## Example
+
+See full example at https://github.com/WqyJh/zero-template.
+
 ## Usage
 
 Inspired by https://github.com/zeromicro/go-zero/issues/2464.
