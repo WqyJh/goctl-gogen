@@ -39,6 +39,9 @@ func updateHandlerComments(filename string, handlerName string, comments []strin
 			list = append(list, &ast.Comment{Text: comment})
 		}
 	}
+	if fn.Doc == nil {
+		fn.Doc = &ast.CommentGroup{}
+	}
 	fn.Doc.List = list
 
 	// Format and write the updated code to file

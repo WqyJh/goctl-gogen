@@ -5,7 +5,7 @@ goctl plugin to parse api definitions and generate api files with handler commen
 ## Installation
 
 ```bash
-go install github.com/wqyjh/goctl-gogen@v0.1.0
+go install github.com/wqyjh/goctl-gogen@v0.1.1
 ```
 
 ## Usage
