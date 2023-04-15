@@ -63,11 +63,16 @@ func doGenToFile(dir, handler string, cfg *config.Config, group spec.Group,
 	if err != nil {
 		return err
 	}
+	filename = filename + ".go"
+	targetFile := path.Join(dir, getHandlerFolderPath(group, route), filename)
+	if pathx.FileExists(targetFile) {
+		return updateHandlerComments(targetFile, handler, route.HandlerDoc)
+	}
 
 	return genFile(fileGenConfig{
 		dir:             dir,
 		subdir:          getHandlerFolderPath(group, route),
-		filename:        filename + ".go",
+		filename:        filename,
 		templateName:    "handlerTemplate",
 		category:        category,
 		templateFile:    handlerTemplateFile,
