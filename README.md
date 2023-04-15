@@ -43,7 +43,7 @@ Generate api using goctl api plugin.
 goctl api plugin -plugin goctl-gogen="--home ${CWD}/../template" -api def/main.api -dir ./ -style goZero
 ```
 
-The document defined would be rendered on handler.
+The document defined would be rendered on handler. And if you update the api file, and regenerate the handler, handler will also be updated.
 
 ```go
 // UserSelf godoc
